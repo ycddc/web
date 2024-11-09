@@ -99,16 +99,13 @@ nav{
 }
 
 section{
-    scroll-snap-align: start;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    position: relative;
 }
 
 .title{
-    padding: 5%;
     background-image: url(../images/main.png);
     color: #fff;
     text-align: center;
@@ -133,7 +130,7 @@ section{
 .text-p{
     line-height: 1.4;
     font-size: 1.2rem;
-    margin-top: 17rem;
+    margin-top: 17.5rem;
     white-space: nowrap;
     display: flex;
     justify-content: center;
@@ -153,38 +150,23 @@ section{
 
 .second{
     background-image: url(../images/sec.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
 }
 
-@keyframes slide-in {
-    from {
-     transform: translateX(-100%);
-    }
-    to {
-     transform: translateX(0%);
-    }
-   }
-
 .scroll_on.type_left{
-    color: #fff;
-    padding-left: 50px;
-    line-height: 1.6;
+    line-height: 1.4;
     font-size: 2rem;
-    font-weight: 700;
+    margin-top: 1rem;
+    margin-left: 4rem;
     white-space: nowrap;
-    padding: 10%;
-    display: flex;
-    justify-content: center;
-    float: left;
+    font-weight: 700;
+    color: #fff;
 }
 
 .scroll_wrap {overflow: hidden;}
 .scroll_on {padding:50px 0;font-size: 24px; font-weight:700; opacity: 0;transition: all 1s;}
 .scroll_on.active {opacity: 1 !important;transform: translate(0, 0) !important;}
 .scroll_on.type_left {transform: translate(-50px, 0);}
+.scroll_on.type_bottom{transform: translate(0, 50px);}
 
 .btn{
     text-align: center;
@@ -218,6 +200,11 @@ section{
 }
 
 @media (max-width: 600px) {
+
+    section{
+        height: 800px;
+    }
+    
     .text1{
         font-size: 1rem;
     }
@@ -244,4 +231,64 @@ section{
     font-size: .8rem;
 }
 
+}
+
+section {
+    width: 100%; /* section의 크기를 원하는 대로 설정 */
+    height: 1000px; /* 예: section의 높이 설정 */
+    overflow: hidden; /* 이미지가 넘치지 않도록 설정 */
+  }
+  
+  section .bubble{
+    width: 70%; /* section의 너비에 맞춤 */
+    height: auto; /* 이미지 비율 유지 */
+  }
+
+  .imgbub{
+    text-align: center;
+  }
+
+  .third{
+    background-image: url(../images/c.png);
+    text-align: center;
+    padding-top: 7%;
+  }
+
+  .scroll_on.type_bottom{
+    color: #fff;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  #product{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   /*  padding: 60px 20px;
+    text-align: center; */
+}
+
+.product-card{
+    background-color: #ffffff;
+    margin: 15px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card  img{
+    border-radius: 10px;
+    width: 300px;
 }
